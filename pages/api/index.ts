@@ -1,9 +1,11 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
+import connect from '../../config/mongodb';
 
 type Data = {
   name: string
 }
+
+connect();
 
 export default function handler(
   req: NextApiRequest,
